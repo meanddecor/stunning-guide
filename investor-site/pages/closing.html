@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closing & Next Steps - VentureOps Investment</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .closing-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .closing-hero h1 {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+        .closing-hero p {
+            font-size: 24px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .decision-box {
+            background: var(--bg-primary);
+            border: 2px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 48px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .decision-amount {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+        .timeline-visual {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            position: relative;
+        }
+        .timeline-visual::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: var(--border-color);
+        }
+        .timeline-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        .timeline-step-marker {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-step-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .timeline-step-date {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        .data-room-list {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+        .data-room-list h3 {
+            margin-bottom: 24px;
+        }
+        .data-room-list ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        .data-room-list li {
+            padding: 12px;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .data-room-list li:before {
+            content: "📄";
+            font-size: 20px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin: 40px 0;
+        }
+        .contact-card {
+            background: var(--bg-tertiary);
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .contact-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+        .cta-large {
+            display: inline-block;
+            padding: 20px 48px;
+            font-size: 20px;
+            font-weight: 600;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            margin: 20px 0;
+        }
+        .cta-large:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        #request-form {
+            max-width: 600px;
+            margin: 40px auto;
+            background: var(--bg-secondary);
+            padding: 40px;
+            border-radius: 12px;
+        }
+        #request-form input,
+        #request-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 16px;
+        }
+        #request-form button {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #request-form button:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">VentureOps</div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="problem.html">Problem & Opportunity</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="market.html">Market & Competitors</a></li>
+                <li><a href="business-model.html">Business Model</a></li>
+                <li><a href="go-to-market.html">Go-to-Market</a></li>
+                <li><a href="operations.html">Operations & Org</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="risk.html">Risk & Compliance</a></li>
+                <li><a href="financials.html">Financials</a></li>
+                <li><a href="impact.html">Impact & Ethics</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="closing.html" class="active">Closing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Closing Hero -->
+    <section class="closing-hero">
+        <div class="container">
+            <h1>The Opportunity Is Now</h1>
+            <p>Join us in building two market-leading companies with proven economics and massive potential</p>
+        </div>
+    </section>
+
+    <!-- Decision Ask -->
+    <section class="content-section">
+        <div class="container">
+            <div class="decision-box">
+                <h2>Investment Decision Requested</h2>
+                <div class="decision-amount">$2.7M Seed Round</div>
+                <p style="font-size: 20px; margin-bottom: 24px;">Greenlight Phase 0 pilots and fund initial operations</p>
+                
+                <div class="highlights-grid" style="text-align: left; margin-top: 32px;">
+                    <div class="highlight-card">
+                        <h4>Use of Funds</h4>
+                        <ul>
+                            <li>Team building (30%)</li>
+                            <li>Working capital (22%)</li>
+                            <li>Technology & systems (15%)</li>
+                            <li>Sales & marketing (15%)</li>
+                            <li>Operations & contingency (18%)</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>Investment Terms</h4>
+                        <ul>
+                            <li>Pre-money valuation: $7.3M</li>
+                            <li>Post-money: $10M</li>
+                            <li>Investor ownership: 27%</li>
+                            <li>Board seats: 2 of 5</li>
+                            <li>Pro-rata rights through Series A</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>Expected Returns</h4>
+                        <ul>
+                            <li>18-month to profitability</li>
+                            <li>3-year revenue: $35.5M</li>
+                            <li>3-year valuation: $51M</li>
+                            <li>Target return: 18.9x</li>
+                            <li>Exit timeline: 4-5 years</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="content-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Investment Process Timeline</h2>
+            
+            <div class="timeline-visual">
+                <div class="timeline-step">
+                    <div class="timeline-step-marker">1</div>
+                    <div class="timeline-step-title">Initial Meeting</div>
+                    <div class="timeline-step-date">Today</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-step-marker">2</div>
+                    <div class="timeline-step-title">Due Diligence</div>
+                    <div class="timeline-step-date">Week 1-2</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-step-marker">3</div>
+                    <div class="timeline-step-title">Partner Meeting</div>
+                    <div class="timeline-step-date">Week 3</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-step-marker">4</div>
+                    <div class="timeline-step-title">Term Sheet</div>
+                    <div class="timeline-step-date">Week 4</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-step-marker">5</div>
+                    <div class="timeline-step-title">Close & Launch</div>
+                    <div class="timeline-step-date">Week 6</div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 32px;">
+                <strong>First pilot results available in 6-8 weeks post-funding</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Data Room -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Data Room Access</h2>
+            
+            <div class="data-room-list">
+                <h3>Available Documents</h3>
+                <ul>
+                    <li>Financial model with scenarios</li>
+                    <li>Draft SOWs and SLAs</li>
+                    <li>SOP v1 documentation</li>
+                    <li>Training deck samples</li>
+                    <li>Pipeline and CRM export</li>
+                    <li>Partner MoUs (signed)</li>
+                    <li>Insurance term sheets</li>
+                    <li>Compliance policies</li>
+                    <li>Screening logs and audits</li>
+                    <li>Pilot results summary</li>
+                    <li>Customer testimonials</li>
+                    <li>Team bios and org chart</li>
+                    <li>Technology architecture</li>
+                    <li>Market research reports</li>
+                    <li>Legal structure documents</li>
+                    <li>IP and trademark filings</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="#request-pack" class="cta-large">Request Full Data Room Access</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Form -->
+    <section class="content-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="text-align: center;">Request Diligence Materials</h2>
+            
+            <form id="request-form">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="company" placeholder="Fund / Company" required>
+                <input type="text" name="title" placeholder="Title" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <textarea name="message" rows="4" placeholder="Any specific questions or areas of interest?"></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Email</h4>
+                    <p>investors@ventureops.com</p>
+                    <p style="font-size: 14px; color: var(--text-secondary); margin-top: 8px;">
+                        Fastest response time
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <h4>Phone</h4>
+                    <p>+1 (555) 123-4567</p>
+                    <p style="font-size: 14px; color: var(--text-secondary); margin-top: 8px;">
+                        Available 9am-6pm EST
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <h4>Signal</h4>
+                    <p>+1 (555) 123-4567</p>
+                    <p style="font-size: 14px; color: var(--text-secondary); margin-top: 8px;">
+                        For secure communications
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="content-section" style="background: var(--bg-secondary); text-align: center;">
+        <div class="container">
+            <h2>Ready to Build Something Exceptional?</h2>
+            <p style="font-size: 20px; margin: 24px auto; max-width: 600px;">
+                We have the team, the playbooks, and the market opportunity. 
+                All we need is the capital to execute.
+            </p>
+            <a href="#request-form" class="cta-large">Start Due Diligence Today</a>
+            
+            <div class="callout-grid" style="margin-top: 48px;">
+                <div class="callout">"Execution over narrative"</div>
+                <div class="callout">"Cash first, options later"</div>
+                <div class="callout">"Measure weekly, adjust monthly"</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>VentureOps</h4>
+                    <p>Building market-leading companies through disciplined execution and measurable results.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="financials.html">Financial Model</a></li>
+                        <li><a href="roadmap.html">Execution Roadmap</a></li>
+                        <li><a href="../index.html">Executive Summary</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal Notice</h4>
+                    <p>This presentation contains forward-looking statements. Actual results may vary. All materials are confidential and proprietary.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <p>&copy; 2024 VentureOps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
