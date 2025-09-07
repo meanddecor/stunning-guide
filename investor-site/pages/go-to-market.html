@@ -8,55 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .timeline {
-            position: relative;
-            padding: 40px 0;
-        }
-        .timeline-item {
-            display: flex;
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateX(-20px);
-            transition: all 0.6s ease;
-        }
-        .timeline-item.animate {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .timeline-marker {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            flex-shrink: 0;
-            margin-right: 24px;
-        }
-        .timeline-content {
-            flex: 1;
-            background: var(--bg-secondary);
-            padding: 24px;
-            border-radius: 8px;
-        }
-        .pipeline-stage {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--bg-tertiary);
-            padding: 16px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-        }
-        .stage-arrow {
-            color: var(--primary-color);
-            font-size: 20px;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -90,11 +41,11 @@
     <section class="page-header">
         <div class="container">
             <h1>Go-to-Market Plan</h1>
-            <p class="subtitle">Targeted approach to rapid market penetration</p>
+            <p class="subtitle">Systematic customer acquisition with measured channel economics</p>
         </div>
     </section>
 
-    <!-- ICP Definition -->
+    <!-- Ideal Customer Profile -->
     <section class="content-section">
         <div class="container">
             <h2>Ideal Customer Profile (ICP)</h2>
@@ -103,23 +54,23 @@
                 <div class="highlight-card">
                     <h3>Hotel Consulting ICP</h3>
                     <ul>
-                        <li><strong>Type:</strong> Independent and lifestyle hotels</li>
+                        <li><strong>Property type:</strong> Independent and lifestyle hotels</li>
                         <li><strong>Size:</strong> 80-250 keys</li>
-                        <li><strong>RevPAR:</strong> $80-$200 range</li>
-                        <li><strong>Leadership:</strong> Owner-led or professional management</li>
-                        <li><strong>Pain:</strong> Margin pressure, outdated systems</li>
-                        <li><strong>Budget:</strong> $100k-$500k for improvements</li>
+                        <li><strong>RevPAR range:</strong> $80-200</li>
+                        <li><strong>Ownership:</strong> Owner-led or institutional with active asset management</li>
+                        <li><strong>Geography:</strong> Primary and secondary markets in [Target Regions]</li>
+                        <li><strong>Pain points:</strong> Margin pressure, labor costs, OTA dependency</li>
                     </ul>
                 </div>
                 <div class="highlight-card">
                     <h3>Export Company ICP</h3>
                     <ul>
-                        <li><strong>Type:</strong> Mid-market importers/distributors</li>
-                        <li><strong>Volume:</strong> $5M-$50M annual imports</li>
-                        <li><strong>Categories:</strong> Food, consumer goods, materials</li>
-                        <li><strong>Geography:</strong> North America, Europe</li>
-                        <li><strong>Pain:</strong> Supply reliability, working capital</li>
-                        <li><strong>Credit:</strong> BB or better rating</li>
+                        <li><strong>Company size:</strong> Mid-market buyers ($10M-500M revenue)</li>
+                        <li><strong>Order profile:</strong> Repeat orders, $100K-1M per shipment</li>
+                        <li><strong>Industries:</strong> Consumer goods, industrial supplies, electronics</li>
+                        <li><strong>Credit profile:</strong> Creditworthy with established operations</li>
+                        <li><strong>Geography:</strong> [Target Import Markets]</li>
+                        <li><strong>Pain points:</strong> Supply reliability, cash flow, compliance complexity</li>
                     </ul>
                 </div>
             </div>
@@ -129,83 +80,61 @@
     <!-- Sales Channels -->
     <section class="content-section" style="background: var(--bg-secondary);">
         <div class="container">
-            <h2>Multi-Channel Strategy</h2>
+            <h2>Channel Strategy</h2>
             
-            <div class="highlights-grid">
-                <div class="highlight-card">
-                    <h4>Direct Channels</h4>
-                    <ul>
-                        <li>Founder network activation</li>
-                        <li>Targeted outbound campaigns</li>
-                        <li>Conference and event presence</li>
-                        <li>Content marketing and SEO</li>
-                    </ul>
-                </div>
-                <div class="highlight-card">
-                    <h4>Partner Channels</h4>
-                    <ul>
-                        <li>Owner groups and associations</li>
-                        <li>Operator forums and networks</li>
-                        <li>Broker and insurer partnerships</li>
-                        <li>Technology vendor alliances</li>
-                    </ul>
-                </div>
-                <div class="highlight-card">
-                    <h4>Digital Channels</h4>
-                    <ul>
-                        <li>LinkedIn outreach and content</li>
-                        <li>Industry publication features</li>
-                        <li>Webinar series on best practices</li>
-                        <li>Case study distribution</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3>Channel Conversion Metrics</h3>
             <div class="data-table">
-                <table class="sortable">
+                <table>
                     <thead>
                         <tr>
                             <th>Channel</th>
-                            <th>Lead→Meeting</th>
-                            <th>Meeting→Proposal</th>
-                            <th>Proposal→Win</th>
-                            <th>Cost/Lead</th>
-                            <th>CAC/Win</th>
+                            <th>Description</th>
+                            <th>Target Volume</th>
+                            <th>Investment</th>
+                            <th>Expected CAC</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Outbound</td>
-                            <td>12%</td>
-                            <td>30%</td>
-                            <td>25%</td>
-                            <td>$120</td>
-                            <td>$13,333</td>
+                            <td><strong>Founder Network</strong></td>
+                            <td>Direct relationships and warm intros</td>
+                            <td>20-30 initial clients</td>
+                            <td>Time only</td>
+                            <td>$200-500</td>
                         </tr>
                         <tr>
-                            <td>Partner</td>
-                            <td>35%</td>
-                            <td>50%</td>
-                            <td>40%</td>
-                            <td>$300</td>
-                            <td>$4,286</td>
+                            <td><strong>Owner Groups</strong></td>
+                            <td>AAHOA, AHLA, regional associations</td>
+                            <td>50+ qualified leads/quarter</td>
+                            <td>$25K/year</td>
+                            <td>$2,000-3,000</td>
                         </tr>
                         <tr>
-                            <td>Content</td>
-                            <td>8%</td>
-                            <td>25%</td>
-                            <td>20%</td>
-                            <td>$60</td>
-                            <td>$15,000</td>
+                            <td><strong>Targeted Outbound</strong></td>
+                            <td>Account-based marketing to ideal profiles</td>
+                            <td>1,000 accounts/quarter</td>
+                            <td>$40K/quarter</td>
+                            <td>$10,000-15,000</td>
                         </tr>
                         <tr>
-                            <td>Events</td>
-                            <td>45%</td>
-                            <td>60%</td>
-                            <td>35%</td>
-                            <td>$800</td>
-                            <td>$8,466</td>
+                            <td><strong>Partner Referrals</strong></td>
+                            <td>Brokers, insurers, tech vendors</td>
+                            <td>30+ warm leads/quarter</td>
+                            <td>Revenue share</td>
+                            <td>$3,000-5,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Content Marketing</strong></td>
+                            <td>Case studies, webinars, thought leadership</td>
+                            <td>200+ MQLs/quarter</td>
+                            <td>$15K/quarter</td>
+                            <td>$12,000-18,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conference Presence</strong></td>
+                            <td>Targeted industry events and speaking</td>
+                            <td>100+ contacts/event</td>
+                            <td>$10K/event</td>
+                            <td>$5,000-8,000</td>
                         </tr>
                     </tbody>
                 </table>
@@ -218,52 +147,68 @@
         <div class="container">
             <h2>Sales Pipeline Process</h2>
             
-            <div class="pipeline-stage">
-                <div>
-                    <h4>1. Discover</h4>
-                    <p>Initial outreach and qualification</p>
-                </div>
-                <span class="stage-arrow">→</span>
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stage</th>
+                            <th>Activities</th>
+                            <th>Exit Criteria</th>
+                            <th>Typical Duration</th>
+                            <th>Conversion Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Discover</strong></td>
+                            <td>Initial outreach, qualification call</td>
+                            <td>BANT confirmed, meeting scheduled</td>
+                            <td>1-3 days</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Diagnose</strong></td>
+                            <td>Discovery meeting, data review</td>
+                            <td>Pain quantified, champion identified</td>
+                            <td>5-7 days</td>
+                            <td>60%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Proposal</strong></td>
+                            <td>Custom proposal, ROI analysis</td>
+                            <td>Proposal presented to decision makers</td>
+                            <td>3-5 days</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Pilot</strong></td>
+                            <td>Scoped pilot or proof of concept</td>
+                            <td>Success metrics achieved</td>
+                            <td>30-60 days</td>
+                            <td>70%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Land</strong></td>
+                            <td>Contract negotiation, onboarding</td>
+                            <td>Contract signed, kickoff scheduled</td>
+                            <td>5-10 days</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6. Expand</strong></td>
+                            <td>Upsell, cross-sell, referrals</td>
+                            <td>Additional services or properties</td>
+                            <td>Ongoing</td>
+                            <td>40%</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
-            <div class="pipeline-stage">
-                <div>
-                    <h4>2. Diagnose</h4>
-                    <p>Deep dive into pain points and opportunities</p>
-                </div>
-                <span class="stage-arrow">→</span>
-            </div>
-            
-            <div class="pipeline-stage">
-                <div>
-                    <h4>3. Proposal</h4>
-                    <p>Customized solution with clear ROI</p>
-                </div>
-                <span class="stage-arrow">→</span>
-            </div>
-            
-            <div class="pipeline-stage">
-                <div>
-                    <h4>4. Pilot</h4>
-                    <p>Small engagement to prove value</p>
-                </div>
-                <span class="stage-arrow">→</span>
-            </div>
-            
-            <div class="pipeline-stage">
-                <div>
-                    <h4>5. Land</h4>
-                    <p>Full engagement kickoff</p>
-                </div>
-                <span class="stage-arrow">→</span>
-            </div>
-            
-            <div class="pipeline-stage">
-                <div>
-                    <h4>6. Expand</h4>
-                    <p>Additional services and referrals</p>
-                </div>
-                <span class="stage-arrow">✓</span>
+            <div class="formula-box" style="margin-top: 24px;">
+                <p><strong>Overall Funnel Math:</strong></p>
+                <p>100 Leads → 20 Discoveries → 12 Diagnoses → 9.6 Proposals → 6.7 Pilots → 6 Lands → 2.4 Expansions</p>
+                <p><strong>Lead-to-Customer Rate: 6%</strong></p>
             </div>
         </div>
     </section>
@@ -275,20 +220,31 @@
             
             <div class="highlights-grid">
                 <div class="highlight-card">
-                    <h4>Measurable Outcomes</h4>
-                    <p>"We don't sell reports, we sell results. Every engagement has clear KPIs and we tie our success to yours."</p>
+                    <h3>1. Measurable Outcomes</h3>
+                    <p>"We guarantee specific, measurable improvements in your key metrics - not just recommendations in a PowerPoint."</p>
+                    <ul>
+                        <li>15%+ RevPAR lift in 6 weeks</li>
+                        <li>20%+ GOP improvement in 90 days</li>
+                        <li>ROI documented and verified</li>
+                    </ul>
                 </div>
                 <div class="highlight-card">
-                    <h4>Weekly Cadence</h4>
-                    <p>"Progress measured weekly, not quarterly. Rapid iteration based on real data, not assumptions."</p>
+                    <h3>2. Weekly Cadence</h3>
+                    <p>"See progress every week, not every quarter. Our rapid iteration model ensures you're never waiting for results."</p>
+                    <ul>
+                        <li>Weekly dashboards and updates</li>
+                        <li>Real-time performance tracking</li>
+                        <li>Immediate course corrections</li>
+                    </ul>
                 </div>
                 <div class="highlight-card">
-                    <h4>Transparency</h4>
-                    <p>"Full visibility into costs, timelines, and performance. No black boxes, no surprises."</p>
-                </div>
-                <div class="highlight-card">
-                    <h4>Compliance First</h4>
-                    <p>"Risk management built into every process. Sleep well knowing everything is documented and insured."</p>
+                    <h3>3. Cash Discipline</h3>
+                    <p>"Every decision optimizes for cash flow and working capital - because cash is oxygen for your business."</p>
+                    <ul>
+                        <li>Positive cash impact from day one</li>
+                        <li>Working capital optimization</li>
+                        <li>Insured and managed risk</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -299,102 +255,118 @@
         <div class="container">
             <h2>Go-to-Market Timeline</h2>
             
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker">1</div>
-                    <div class="timeline-content">
-                        <h4>90-Day Sprint</h4>
-                        <ul>
-                            <li>Build top-100 account list for each vertical</li>
-                            <li>Publish 3 diagnostic articles showcasing expertise</li>
-                            <li>Release 2 SOP teasers demonstrating process rigor</li>
-                            <li>Secure 3 lighthouse pilots with friendly clients</li>
-                            <li>Establish baseline metrics and reporting</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-marker">2</div>
-                    <div class="timeline-content">
-                        <h4>180-Day Expansion</h4>
-                        <ul>
-                            <li>12 signed clients across both companies</li>
-                            <li>Publish detailed case studies with metrics</li>
-                            <li>Launch partner referral program</li>
-                            <li>Implement credit insurance program</li>
-                            <li>Scale outbound team to 3 SDRs</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-marker">3</div>
-                    <div class="timeline-content">
-                        <h4>12-Month Targets</h4>
-                        <ul>
-                            <li><strong>Hotel Consulting:</strong> 24 active retainers, 12 sprints per quarter</li>
-                            <li><strong>Export Company:</strong> 18 recurring buyers, 6 trade lanes, full insurance coverage</li>
-                            <li>Launch customer advisory board</li>
-                            <li>Host inaugural industry summit</li>
-                            <li>Achieve net promoter score >70</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Marketing Activities -->
-    <section class="content-section" style="background: var(--bg-secondary);">
-        <div class="container">
-            <h2>Content & Marketing Calendar</h2>
-            
+            <h3>90-Day Launch Plan</h3>
             <div class="data-table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Month</th>
-                            <th>Content Focus</th>
-                            <th>Lead Magnets</th>
-                            <th>Events</th>
+                            <th>Week</th>
+                            <th>Activities</th>
+                            <th>Deliverables</th>
+                            <th>Success Metrics</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Month 1-3</td>
-                            <td>Industry pain points, market insights</td>
-                            <td>RevPAR optimization checklist</td>
-                            <td>Webinar: "Post-COVID Recovery"</td>
+                            <td><strong>1-2</strong></td>
+                            <td>Build target account lists, refine messaging</td>
+                            <td>Top-100 account database, pitch deck</td>
+                            <td>100 qualified accounts identified</td>
                         </tr>
                         <tr>
-                            <td>Month 4-6</td>
-                            <td>Case studies, success metrics</td>
-                            <td>Export cost calculator</td>
-                            <td>HITEC conference booth</td>
+                            <td><strong>3-4</strong></td>
+                            <td>Launch outbound campaigns, activate network</td>
+                            <td>Email sequences, LinkedIn campaigns</td>
+                            <td>200+ touchpoints, 20+ responses</td>
                         </tr>
                         <tr>
-                            <td>Month 7-9</td>
-                            <td>Best practices, playbook previews</td>
-                            <td>Labor optimization guide</td>
-                            <td>Private owner dinners</td>
+                            <td><strong>5-8</strong></td>
+                            <td>Conduct discovery calls, build proposals</td>
+                            <td>Custom proposals, ROI calculators</td>
+                            <td>15+ discoveries, 5+ proposals</td>
                         </tr>
                         <tr>
-                            <td>Month 10-12</td>
-                            <td>2025 trends, planning guides</td>
-                            <td>Annual benchmarking report</td>
-                            <td>VentureOps Summit launch</td>
+                            <td><strong>9-12</strong></td>
+                            <td>Close pilots, publish case studies</td>
+                            <td>3 signed pilots, 2 case studies</td>
+                            <td>$300K+ in pipeline</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+
+            <h3>180-Day Scale Plan</h3>
+            <ul style="line-height: 2; margin-top: 24px;">
+                <li>✓ 12 signed clients across both companies</li>
+                <li>✓ 3 detailed case studies with verified metrics</li>
+                <li>✓ Partner agreements with 2+ channel partners</li>
+                <li>✓ Credit insurance program with defined limits</li>
+                <li>✓ 50+ piece content library (articles, templates, calculators)</li>
+            </ul>
+
+            <h3>12-Month Targets</h3>
+            <div class="stats-grid" style="margin-top: 32px;">
+                <div class="stat">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Active Hotel Retainers</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Sprints per Year</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Recurring Export Buyers</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Trade Lanes Active</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- GTM Principles -->
+    <!-- Content Strategy -->
+    <section class="content-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Content & Thought Leadership</h2>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h3>Diagnostic Tools</h3>
+                    <ul>
+                        <li>RevPAR Opportunity Calculator</li>
+                        <li>Labor Efficiency Benchmark Tool</li>
+                        <li>Landed Cost Calculator</li>
+                        <li>Working Capital Optimizer</li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h3>Educational Content</h3>
+                    <ul>
+                        <li>Weekly market insights newsletter</li>
+                        <li>Best practices guides and templates</li>
+                        <li>Video case study walkthroughs</li>
+                        <li>Monthly webinar series</li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h3>Social Proof</h3>
+                    <ul>
+                        <li>Client success stories with metrics</li>
+                        <li>Before/after P&L comparisons</li>
+                        <li>Video testimonials from owners</li>
+                        <li>Industry recognition and awards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Insights -->
     <section class="content-section">
         <div class="container">
-            <h2>Go-to-Market Principles</h2>
+            <h2>GTM Principles</h2>
             <div class="callout-grid">
                 <div class="callout">"Meetings booked weekly, not someday"</div>
                 <div class="callout">"Partners as force multipliers"</div>

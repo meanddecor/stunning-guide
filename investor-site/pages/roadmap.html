@@ -8,110 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .roadmap-timeline {
-            position: relative;
-            padding: 40px 0;
-        }
-        .roadmap-timeline::before {
-            content: '';
-            position: absolute;
-            left: 50px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--border-color);
-        }
-        .phase-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 32px;
-            margin-bottom: 40px;
-            margin-left: 80px;
-            position: relative;
-            box-shadow: var(--shadow-md);
-        }
-        .phase-card::before {
-            content: '';
-            position: absolute;
-            left: -30px;
-            top: 40px;
-            width: 20px;
-            height: 20px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            border: 4px solid var(--bg-primary);
-        }
-        .phase-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-        .phase-title {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        .phase-timeline {
-            background: var(--bg-secondary);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-top: 24px;
-        }
-        .kpi-item {
-            background: var(--bg-tertiary);
-            padding: 16px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .kpi-value {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        .kpi-label {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-top: 4px;
-        }
-        .task-list {
-            list-style: none;
-            padding: 0;
-            margin: 16px 0;
-        }
-        .task-list li {
-            padding: 12px 0;
-            padding-left: 28px;
-            position: relative;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .task-list li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-        .owner-badge {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 500;
-            margin-left: 8px;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -145,306 +41,369 @@
     <section class="page-header">
         <div class="container">
             <h1>Execution Roadmap</h1>
-            <p class="subtitle">Phase-by-phase plan with clear milestones and accountability</p>
+            <p class="subtitle">Phase-by-phase plan with clear owners, budgets, and KPI gates</p>
         </div>
     </section>
 
-    <!-- Roadmap Timeline -->
+    <!-- Phase Overview -->
     <section class="content-section">
         <div class="container">
-            <div class="roadmap-timeline">
-                <!-- Phase 0 -->
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <h2 class="phase-title">Phase 0: Validation</h2>
-                        <span class="phase-timeline">Months 0-3</span>
-                    </div>
-                    
-                    <h3>Objectives</h3>
-                    <p>Prove uplift economics and cash cycle controls through targeted pilots</p>
-                    
-                    <h3>Key Tasks</h3>
-                    <ul class="task-list">
-                        <li>Execute 3 pilots per company with friendly clients</li>
-                        <li>Develop and refine SOP v1 documentation</li>
-                        <li>Secure insurer and broker MoUs</li>
-                        <li>Build initial playbook library</li>
-                        <li>Establish baseline metrics and reporting</li>
-                    </ul>
-                    
-                    <h3>Team & Ownership</h3>
-                    <p>
-                        <strong>Owners:</strong> Founder<span class="owner-badge">Lead</span>, 
-                        Revenue Lead<span class="owner-badge">Support</span>, 
-                        Operations Lead<span class="owner-badge">Support</span>
-                    </p>
-                    
-                    <h3>Budget</h3>
-                    <p><strong>$450,000</strong> - Includes pilot costs, initial tools, travel, and contractor fees</p>
-                    
-                    <h3>Success KPIs</h3>
-                    <div class="kpi-grid">
-                        <div class="kpi-item">
-                            <div class="kpi-value">≥8</div>
-                            <div class="kpi-label">Pilot NPS Score</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value">≥15%</div>
-                            <div class="kpi-label">RevPAR Lift</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value">≥15%</div>
-                            <div class="kpi-label">Export Margin</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value">100%</div>
-                            <div class="kpi-label">Pilot Conversion</div>
-                        </div>
-                    </div>
+            <h2>Three-Phase Journey</h2>
+            
+            <div class="timeline roadmap-timeline">
+                <div class="timeline-item">
+                    <h3>Phase 0: Validation</h3>
+                    <p>Months 0-3</p>
+                    <p>Prove economics and refine playbooks</p>
                 </div>
-
-                <!-- Phase 1 -->
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <h2 class="phase-title">Phase 1: Launch</h2>
-                        <span class="phase-timeline">Months 4-9</span>
-                    </div>
-                    
-                    <h3>Objectives</h3>
-                    <p>Convert pilots to retainers and recurring buyers, establish market presence</p>
-                    
-                    <h3>Key Tasks</h3>
-                    <ul class="task-list">
-                        <li>Hire and train Pod 1 team (6-8 FTEs)</li>
-                        <li>Publish 4 detailed case studies with metrics</li>
-                        <li>Launch partner referral program</li>
-                        <li>Implement credit insurance program</li>
-                        <li>Finalize pricing and packaging</li>
-                        <li>Deploy CRM and analytics infrastructure</li>
-                    </ul>
-                    
-                    <h3>Team & Ownership</h3>
-                    <p>
-                        <strong>Owners:</strong> Partner<span class="owner-badge">Lead</span>, 
-                        Sales Lead<span class="owner-badge">Primary</span>, 
-                        Operations Manager<span class="owner-badge">Support</span>
-                    </p>
-                    
-                    <h3>Budget</h3>
-                    <p><strong>$1,200,000</strong> - Hiring, sales programs, technology, working capital</p>
-                    
-                    <h3>Success KPIs</h3>
-                    <div class="kpi-grid">
-                        <div class="kpi-item">
-                            <div class="kpi-value">10</div>
-                            <div class="kpi-label">Hotel Clients</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value">8</div>
-                            <div class="kpi-label">Export Buyers</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value">≥45%</div>
-                            <div class="kpi-label">Contribution Margin</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value"><60</div>
-                            <div class="kpi-label">DSO (days)</div>
-                        </div>
-                    </div>
+                <div class="timeline-item">
+                    <h3>Phase 1: Launch</h3>
+                    <p>Months 4-9</p>
+                    <p>Scale to first 10 clients per company</p>
                 </div>
-
-                <!-- Phase 2 -->
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <h2 class="phase-title">Phase 2: Scale</h2>
-                        <span class="phase-timeline">Months 10-24</span>
-                    </div>
-                    
-                    <h3>Objectives</h3>
-                    <p>Build repeatable growth engine with multiple delivery pods and compliance infrastructure</p>
-                    
-                    <h3>Key Tasks</h3>
-                    <ul class="task-list">
-                        <li>Launch Pod 2 for each business line</li>
-                        <li>Establish shared compliance function</li>
-                        <li>Develop training academy and certification</li>
-                        <li>Release SOP v2 with automation</li>
-                        <li>Launch customer advisory board</li>
-                        <li>Expand to 2 new geographic markets</li>
-                        <li>Implement advanced analytics and BI</li>
-                    </ul>
-                    
-                    <h3>Team & Ownership</h3>
-                    <p>
-                        <strong>Owners:</strong> COO<span class="owner-badge">Lead</span>, 
-                        Compliance Lead<span class="owner-badge">Primary</span>, 
-                        Pod Leaders<span class="owner-badge">Execute</span>
-                    </p>
-                    
-                    <h3>Budget</h3>
-                    <p><strong>$2,800,000</strong> - Team expansion, infrastructure, market entry</p>
-                    
-                    <h3>Success KPIs</h3>
-                    <div class="kpi-grid">
-                        <div class="kpi-item">
-                            <div class="kpi-value">30</div>
-                            <div class="kpi-label">Hotel Clients</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value">20</div>
-                            <div class="kpi-label">Export Buyers</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value"><10%</div>
-                            <div class="kpi-label">Annual Churn</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value"><3mo</div>
-                            <div class="kpi-label">CAC Payback</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value">≥80%</div>
-                            <div class="kpi-label">Insured Receivables</div>
-                        </div>
-                        <div class="kpi-item">
-                            <div class="kpi-value">>70</div>
-                            <div class="kpi-label">NPS Score</div>
-                        </div>
-                    </div>
+                <div class="timeline-item">
+                    <h3>Phase 2: Scale</h3>
+                    <p>Months 10-24</p>
+                    <p>Build pods and expand geographies</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Milestone Gates -->
+    <!-- Phase 0: Validation -->
     <section class="content-section" style="background: var(--bg-secondary);">
         <div class="container">
-            <h2>Milestone Gates & Decision Points</h2>
+            <h2>Phase 0: Validation (Months 0-3)</h2>
             
+            <div class="kpi-chips">
+                <div class="kpi-chip">Budget: <span class="value">$[Amount]</span></div>
+                <div class="kpi-chip">Team Size: <span class="value">3-4 FTEs</span></div>
+                <div class="kpi-chip">Target Pilots: <span class="value">6 Total</span></div>
+            </div>
+            
+            <h3>Objectives</h3>
+            <ul>
+                <li>Prove uplift economics with measurable results</li>
+                <li>Validate cash cycle controls and working capital model</li>
+                <li>Refine SOPs based on pilot learnings</li>
+                <li>Secure initial insurance and financing partnerships</li>
+            </ul>
+
+            <h3>Key Tasks & Owners</h3>
             <div class="data-table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Milestone</th>
-                            <th>Timing</th>
-                            <th>Go/No-Go Criteria</th>
-                            <th>Decision Authority</th>
+                            <th>Task</th>
+                            <th>Owner</th>
+                            <th>Timeline</th>
+                            <th>Success Criteria</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Pilot Completion</strong></td>
-                            <td>Month 3</td>
-                            <td>NPS ≥8, measurable uplift achieved, 80% pilot conversion</td>
-                            <td>Board</td>
+                            <td>Run 3 hotel consulting pilots</td>
+                            <td>Founder + Rev Lead</td>
+                            <td>Weeks 1-8</td>
+                            <td>≥15% RevPAR lift documented</td>
                         </tr>
                         <tr>
-                            <td><strong>Phase 1 Launch</strong></td>
-                            <td>Month 4</td>
-                            <td>Playbooks complete, team hired, systems deployed</td>
-                            <td>CEO + Board</td>
+                            <td>Execute 3 export transactions</td>
+                            <td>Founder + Ops Lead</td>
+                            <td>Weeks 2-10</td>
+                            <td>≥15% margin after all costs</td>
                         </tr>
                         <tr>
-                            <td><strong>Scale Decision</strong></td>
-                            <td>Month 9</td>
-                            <td>10+ clients, positive contribution, CAC <6 months</td>
-                            <td>Board</td>
+                            <td>Document SOPs v1</td>
+                            <td>All team members</td>
+                            <td>Weeks 6-12</td>
+                            <td>Complete playbook library</td>
                         </tr>
                         <tr>
-                            <td><strong>Geographic Expansion</strong></td>
-                            <td>Month 12</td>
-                            <td>Home market profitable, playbooks proven, team depth</td>
-                            <td>CEO + Board</td>
+                            <td>Secure broker/insurer MoUs</td>
+                            <td>Founder</td>
+                            <td>Weeks 4-8</td>
+                            <td>3+ signed partnerships</td>
                         </tr>
                         <tr>
-                            <td><strong>Series A Readiness</strong></td>
-                            <td>Month 18</td>
-                            <td>$1M+ MRR, <15% churn, clear path to $10M ARR</td>
-                            <td>Board</td>
+                            <td>Build financial model v2</td>
+                            <td>Finance Lead</td>
+                            <td>Weeks 8-12</td>
+                            <td>Validated unit economics</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
-    </section>
 
-    <!-- Critical Path -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Critical Path Dependencies</h2>
-            
+            <h3>Phase 0 KPIs</h3>
             <div class="highlights-grid">
                 <div class="highlight-card">
-                    <h4>Technology Foundation</h4>
+                    <h4>Hotel Consulting</h4>
                     <ul>
-                        <li>CRM deployment → Sales efficiency</li>
-                        <li>Analytics platform → Performance tracking</li>
-                        <li>Compliance tools → Risk management</li>
-                        <li>Integration APIs → Operational scale</li>
+                        <li>Pilot NPS ≥ 8</li>
+                        <li>RevPAR lift ≥ 15% on targeted levers</li>
+                        <li>100% on-time delivery</li>
                     </ul>
                 </div>
                 <div class="highlight-card">
-                    <h4>Team Building</h4>
+                    <h4>Export Company</h4>
                     <ul>
-                        <li>Pod 1 success → Pod 2 launch</li>
-                        <li>Training program → Quality consistency</li>
-                        <li>Leadership depth → Geographic expansion</li>
-                        <li>Culture codification → Sustainable growth</li>
-                    </ul>
-                </div>
-                <div class="highlight-card">
-                    <h4>Market Validation</h4>
-                    <ul>
-                        <li>Pilot results → Pricing confidence</li>
-                        <li>Case studies → Sales acceleration</li>
-                        <li>Client feedback → Product refinement</li>
-                        <li>Partner traction → Channel leverage</li>
+                        <li>Net margin ≥ 15% after finance costs</li>
+                        <li>Zero compliance issues</li>
+                        <li>100% quality acceptance</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Risk Mitigation -->
+    <!-- Phase 1: Launch -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Phase 1: Launch (Months 4-9)</h2>
+            
+            <div class="kpi-chips">
+                <div class="kpi-chip">Budget: <span class="value">$[Amount]</span></div>
+                <div class="kpi-chip">Team Size: <span class="value">6-8 FTEs</span></div>
+                <div class="kpi-chip">Revenue Target: <span class="value">$1.5M ARR</span></div>
+            </div>
+            
+            <h3>Objectives</h3>
+            <ul>
+                <li>Convert pilots to long-term contracts</li>
+                <li>Build first full delivery pod for each company</li>
+                <li>Launch systematic GTM engine</li>
+                <li>Establish operational rhythms and reporting</li>
+            </ul>
+
+            <h3>Key Tasks & Owners</h3>
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Owner</th>
+                            <th>Timeline</th>
+                            <th>Success Criteria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hire Pod 1 team members</td>
+                            <td>Partner + Founder</td>
+                            <td>Months 4-5</td>
+                            <td>6 A-players onboarded</td>
+                        </tr>
+                        <tr>
+                            <td>Launch outbound GTM</td>
+                            <td>Sales Lead</td>
+                            <td>Month 4</td>
+                            <td>1,000 accounts engaged</td>
+                        </tr>
+                        <tr>
+                            <td>Publish 4 case studies</td>
+                            <td>Marketing</td>
+                            <td>Months 5-7</td>
+                            <td>Verified metrics published</td>
+                        </tr>
+                        <tr>
+                            <td>Implement CRM & BI tools</td>
+                            <td>Ops Lead</td>
+                            <td>Month 5</td>
+                            <td>Full pipeline visibility</td>
+                        </tr>
+                        <tr>
+                            <td>Finalize pricing model</td>
+                            <td>Partner + Finance</td>
+                            <td>Month 6</td>
+                            <td>Profitable unit economics</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Phase 1 KPIs</h3>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>Growth Metrics</h4>
+                    <ul>
+                        <li>10 hotel clients signed</li>
+                        <li>8 export buyers active</li>
+                        <li>$2M+ contracted revenue</li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h4>Operational Metrics</h4>
+                    <ul>
+                        <li>Contribution margin ≥ 45%</li>
+                        <li>DSO < 45 days</li>
+                        <li>Team utilization > 75%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 2: Scale -->
     <section class="content-section" style="background: var(--bg-secondary);">
         <div class="container">
-            <h2>Execution Risk Mitigation</h2>
+            <h2>Phase 2: Scale (Months 10-24)</h2>
+            
+            <div class="kpi-chips">
+                <div class="kpi-chip">Budget: <span class="value">$[Amount]</span></div>
+                <div class="kpi-chip">Team Size: <span class="value">15-20 FTEs</span></div>
+                <div class="kpi-chip">Revenue Target: <span class="value">$6M+ ARR</span></div>
+            </div>
+            
+            <h3>Objectives</h3>
+            <ul>
+                <li>Launch second pod for each company</li>
+                <li>Expand to new geographies/verticals</li>
+                <li>Build training academy and partner program</li>
+                <li>Achieve cash flow positive operations</li>
+            </ul>
+
+            <h3>Key Tasks & Owners</h3>
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Owner</th>
+                            <th>Timeline</th>
+                            <th>Success Criteria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Build Pod 2 teams</td>
+                            <td>COO</td>
+                            <td>Months 10-12</td>
+                            <td>Full pods operational</td>
+                        </tr>
+                        <tr>
+                            <td>Launch partner program</td>
+                            <td>Partner Lead</td>
+                            <td>Month 12</td>
+                            <td>5+ active partners</td>
+                        </tr>
+                        <tr>
+                            <td>Implement SOP v2</td>
+                            <td>Ops Team</td>
+                            <td>Months 13-15</td>
+                            <td>90% process automation</td>
+                        </tr>
+                        <tr>
+                            <td>Create training academy</td>
+                            <td>Head of People</td>
+                            <td>Months 14-16</td>
+                            <td>100% certified team</td>
+                        </tr>
+                        <tr>
+                            <td>Establish compliance function</td>
+                            <td>Compliance Lead</td>
+                            <td>Month 11</td>
+                            <td>Zero violations</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Phase 2 KPIs</h3>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>Scale Metrics</h4>
+                    <ul>
+                        <li>30+ hotel clients</li>
+                        <li>20+ export buyers</li>
+                        <li>2 full pods per company</li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h4>Efficiency Metrics</h4>
+                    <ul>
+                        <li>Churn < 10% annually</li>
+                        <li>CAC payback < 3 months</li>
+                        <li>EBITDA positive</li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h4>Risk Metrics</h4>
+                    <ul>
+                        <li>80%+ insured receivables</li>
+                        <li>Zero compliance breaches</li>
+                        <li>NPS > 8 sustained</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Timeline -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Capital Deployment Schedule</h2>
             
             <div class="data-table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Risk</th>
-                            <th>Mitigation Strategy</th>
-                            <th>Early Warning Signs</th>
+                            <th>Use of Funds</th>
+                            <th>Phase 0</th>
+                            <th>Phase 1</th>
+                            <th>Phase 2</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Talent acquisition delays</td>
-                            <td>Build pipeline early, use contractors, competitive comp</td>
-                            <td>Open roles >60 days</td>
+                            <td><strong>Hiring & Training</strong></td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Total]</td>
                         </tr>
                         <tr>
-                            <td>Pilot results below target</td>
-                            <td>Rapid iteration, close client collaboration, pivot ready</td>
-                            <td>Week 2 metrics off track</td>
+                            <td><strong>Technology & Tools</strong></td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Total]</td>
                         </tr>
                         <tr>
-                            <td>Technology implementation issues</td>
-                            <td>Phased rollout, vendor SLAs, internal capabilities</td>
-                            <td>Integration delays >2 weeks</td>
+                            <td><strong>Working Capital</strong></td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Total]</td>
                         </tr>
                         <tr>
-                            <td>Market adoption slower than expected</td>
-                            <td>Multiple channels, value proof points, pricing flexibility</td>
-                            <td>Pipeline conversion <20%</td>
+                            <td><strong>Sales & Marketing</strong></td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Total]</td>
                         </tr>
                         <tr>
-                            <td>Working capital constraints</td>
-                            <td>Credit facility in place, milestone-based funding, tight AR</td>
-                            <td>DSO trending >75 days</td>
+                            <td><strong>Insurance & Legal</strong></td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Total]</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contingency (10%)</strong></td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Amount]</td>
+                            <td>$[Total]</td>
+                        </tr>
+                        <tr style="font-weight: 700;">
+                            <td><strong>Total by Phase</strong></td>
+                            <td><strong>$[Total]</strong></td>
+                            <td><strong>$[Total]</strong></td>
+                            <td><strong>$[Total]</strong></td>
+                            <td><strong>$[Grand Total]</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -452,8 +411,8 @@
         </div>
     </section>
 
-    <!-- Roadmap Principles -->
-    <section class="content-section">
+    <!-- Key Principles -->
+    <section class="content-section" style="background: var(--bg-secondary);">
         <div class="container">
             <h2>Execution Principles</h2>
             <div class="callout-grid">

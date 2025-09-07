@@ -407,6 +407,13 @@ body {
     margin-top: 32px;
 }
 
+.content-section h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    margin-top: 24px;
+    color: var(--primary-color);
+}
+
 .content-section p {
     margin-bottom: 16px;
     line-height: 1.8;
@@ -474,6 +481,20 @@ body {
     font-family: 'Courier New', monospace;
     font-size: 14px;
     overflow-x: auto;
+    position: relative;
+}
+
+.formula-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    color: var(--text-primary);
+}
+
+.formula-box p {
+    margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--text-primary);
 }
 
 /* Tooltips */
@@ -532,4 +553,243 @@ body {
 .download-btn:hover {
     background: var(--secondary-color);
     transform: translateY(-2px);
+}
+
+/* Enhanced table styles */
+.data-table th {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.data-table td strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.data-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background: var(--bg-tertiary);
+}
+
+/* Sortable table headers */
+.data-table th.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.data-table th.sortable:after {
+    content: " ↕";
+    opacity: 0.3;
+}
+
+.data-table th.sortable.asc:after {
+    content: " ↑";
+    opacity: 1;
+}
+
+.data-table th.sortable.desc:after {
+    content: " ↓";
+    opacity: 1;
+}
+
+/* Enhanced highlight cards */
+.highlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+}
+
+/* Risk matrix styles */
+.risk-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.risk-item {
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+.risk-item.high-impact {
+    border-color: #ef4444;
+    background: #fee2e2;
+}
+
+.risk-item.medium-impact {
+    border-color: #f59e0b;
+    background: #fef3c7;
+}
+
+.risk-item.low-impact {
+    border-color: #10b981;
+    background: #d1fae5;
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 20px 40px;
+    width: 50%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.timeline-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd):before {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even):before {
+    left: -10px;
+}
+
+/* KPI chips */
+.kpi-chips {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.kpi-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.kpi-chip .value {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Form enhancements */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+    .timeline:before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        text-align: left !important;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item:before {
+        left: 10px !important;
+    }
+    
+    .risk-matrix {
+        grid-template-columns: 1fr;
+    }
+    
+    .kpi-chips {
+        justify-content: center;
+    }
+}
+
+/* Print styles */
+@media print {
+    .main-nav,
+    .main-footer,
+    .cta-button,
+    .download-btn {
+        display: none;
+    }
+    
+    .page-header {
+        background: white;
+        border-bottom: 2px solid #000;
+    }
+    
+    .content-section {
+        page-break-inside: avoid;
+    }
+    
+    .data-table table {
+        font-size: 12px;
+    }
 }
