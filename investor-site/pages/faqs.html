@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - VentureOps Investment</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 24px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        .faq-question:hover {
+            background: var(--bg-secondary);
+        }
+        .faq-toggle {
+            font-size: 24px;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s;
+        }
+        .faq-item.active .faq-answer {
+            padding: 0 24px 24px;
+            max-height: 500px;
+        }
+        .faq-answer p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">VentureOps</div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="problem.html">Problem & Opportunity</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="market.html">Market & Competitors</a></li>
+                <li><a href="business-model.html">Business Model</a></li>
+                <li><a href="go-to-market.html">Go-to-Market</a></li>
+                <li><a href="operations.html">Operations & Org</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="risk.html">Risk & Compliance</a></li>
+                <li><a href="financials.html">Financials</a></li>
+                <li><a href="impact.html">Impact & Ethics</a></li>
+                <li><a href="faqs.html" class="active">FAQs</a></li>
+                <li><a href="closing.html">Closing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p class="subtitle">Direct answers to critical investor questions</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="faq-section">
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What if the uplift does not appear in month one?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We target leading indicators weekly and tie our fees to measured outcomes. Our sprint methodology includes weekly checkpoints where we can pivot tactics based on real-time data. Additionally, our fee structure includes performance components, aligning our compensation with client success.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do you prevent export payment risk?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We employ a multi-layered approach: credit insurance on all receivables, strict credit limits based on buyer history, optional letter of credit requirements for new relationships, and comprehensive documentation that meets insurance claim requirements. Our default rate target is under 0.5% of revenue.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why choose you over established incumbents?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Three key differentiators: First, we deliver operator-grade playbooks with measurable results, not theoretical frameworks. Second, our visible weekly cadence ensures rapid implementation versus quarterly check-ins. Third, our cash-cycle design and integrated approach reduces total cost of engagement by 40-60% versus traditional providers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can this scale without the founders?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our pod structure, comprehensive SOPs, and training academy create repeatable delivery independent of any individual. We're building institutional knowledge through documented playbooks, not personal relationships. By Month 12, we expect 80% of delivery to be handled by non-founder team members.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is the failure line that triggers a pivot?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We have clear red lines: customer churn exceeding 15% annually or CAC payback extending beyond 6 months triggers an immediate spending freeze and strategic review. These metrics are tracked weekly with automated alerts to the board.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do you maintain quality during rapid scaling?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Quality is maintained through three mechanisms: standardized SOPs that capture best practices, intensive 30-day onboarding for all client-facing staff, and weekly quality reviews with objective metrics. Each pod has a dedicated quality lead, and client NPS is tracked continuously with alerts for any score below 7.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's your competitive moat?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our moat consists of: proprietary playbooks refined through hundreds of engagements, exclusive partnerships with key service providers, a compliance infrastructure that takes years to build, and most importantly, a track record of measurable results that compounds our credibility with each success.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do you handle economic downturns?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our model is counter-cyclical in many ways. During downturns, hotels need cost optimization more than ever, making our services more valuable. Export buyers seek reliable, cost-effective suppliers. Our variable cost structure allows us to scale down if needed while maintaining core capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What are the key technology dependencies?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We rely on proven, enterprise-grade systems: Salesforce for CRM, established BI platforms for analytics, and API integrations with major PMS/RMS systems. We maintain redundancy and avoid bleeding-edge technologies. All critical systems have SLAs and backup procedures.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do you ensure regulatory compliance across markets?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Compliance is built into our operating model with dedicated compliance officers, quarterly third-party audits, automated screening systems, and partnerships with local legal counsel in each market. We maintain a zero-tolerance policy for violations and invest 3% of revenue in compliance infrastructure.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="content-section" style="background: var(--bg-secondary);">
+        <div class="container" style="text-align: center;">
+            <h2>Have More Questions?</h2>
+            <p style="font-size: 18px; margin: 24px auto; max-width: 600px;">
+                We welcome detailed discussions about our model, market opportunity, and execution plans.
+            </p>
+            <a href="closing.html#request-form" class="cta-button primary">Schedule a Deep Dive Session</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: investors@ventureops.com</p>
+                    <p>Signal: +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="financials.html">Financial Model</a></li>
+                        <li><a href="roadmap.html">Execution Roadmap</a></li>
+                        <li><a href="../index.html#request-pack">Data Room Access</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p>This presentation contains confidential information. Do not distribute without permission.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current FAQ
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
