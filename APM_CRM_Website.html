@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APM Restaurant Management System - Strategic Partnership Proposal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #1a1a1a;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .kpi-chips {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .kpi-chip {
+            background: rgba(255,255,255,0.2);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .kpi-chip h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-button {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+        
+        .cta-button:hover {
+            background: #45a049;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Tables */
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background: #2c3e50;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        /* Financial Charts */
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .metric-box .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-box .label {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #4CAF50;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
+            padding: 0 2rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            text-align: right;
+            padding-right: calc(50% + 2rem);
+        }
+        
+        .timeline-item:nth-child(even) {
+            text-align: left;
+            padding-left: calc(50% + 2rem);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #4CAF50;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .kpi-chips {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 50px !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+            
+            .timeline-item::before {
+                left: 20px !important;
+                transform: none !important;
+            }
+        }
+        
+        /* Callouts */
+        .callout {
+            background: #e8f5e8;
+            border-left: 4px solid #4CAF50;
+            padding: 1rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .callout.warning {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+        
+        .callout.info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">APM Restaurant Management System</div>
+                <ul class="nav-links">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#opportunity">Opportunity</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#partnership">Partnership</a></li>
+                    <li><a href="#financials">Financials</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#next-steps">Next Steps</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="overview">
+        <div class="container">
+            <h1>APM Restaurant Management System</h1>
+            <p class="subtitle">Strategic Partnership Proposal for Alvaro Perez Miranda & APM Restaurant Group</p>
+            
+            <div class="kpi-chips">
+                <div class="kpi-chip">
+                    <h3>$9K-20K</h3>
+                    <p>Modeled Monthly Revenue (baseline-adjusted)</p>
+                </div>
+                <div class="kpi-chip">
+                    <h3>50/50</h3>
+                    <p>Founders Partnership</p>
+                </div>
+                <div class="kpi-chip">
+                    <h3>$50M</h3>
+                    <p>Japan Hotel Goal</p>
+                </div>
+            </div>
+            
+            <p style="font-size: 1.2rem; margin: 2rem 0;">Transform APM Restaurant Group's three flagship venues (Ogawa, Hiyakawa, Midorie) into a unified, data-driven operation that maximizes revenue per guest while building toward the $50M Japan hotel objective.</p>
+            
+            <div style="font-size: 1rem; margin: 1rem 0; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+                <small><em><strong>Timeline and cost set at end of discovery.</strong> All projections contingent on signed Scope of Work and change control process.</em></small>
+            </div>
+            
+            <a href="#solution" class="cta-button">View Strategic Plan</a>
+        </div>
+    </section>
+
+    <!-- The Opportunity -->
+    <section class="section" id="opportunity">
+        <div class="container">
+            <h2>The Strategic Opportunity</h2>
+            <div class="section-content">
+                <div class="cards">
+                    <div class="card">
+                        <h3>Current Assets</h3>
+                        <ul>
+                            <li><strong>3 established venues</strong> with distinct customer bases</li>
+                            <li><strong>Prime locations</strong> with proven foot traffic</li>
+                            <li><strong>Brand recognition</strong> in competitive markets</li>
+                            <li><strong>Operational expertise</strong> in hospitality management</li>
+                            <li><strong>Capital access</strong> for strategic investments</li>
+                            <li><strong>Vision</strong> for international hospitality expansion</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Value Gaps We're Filling</h3>
+                        <ul>
+                            <li><strong>Fragmented guest data</strong> across venues</li>
+                            <li><strong>No-show losses</strong> eating into profit margins</li>
+                            <li><strong>Missed cross-selling</strong> opportunities between locations</li>
+                            <li><strong>Limited guest lifetime value</strong> optimization</li>
+                            <li><strong>No unified marketing</strong> capability</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="callout">
+                    <strong>The Timing:</strong> Transform APM Restaurant Group's three flagship venues into a unified, data-driven operation that maximizes revenue per guest while building toward the $50M Japan hotel objective.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section class="section" id="solution">
+        <div class="container">
+            <h2>Product Vision: Restaurant Management System</h2>
+            <div class="section-content">
+                <p style="font-size: 1.2rem; text-align: center; margin-bottom: 3rem;">A custom restaurant management system—OpenTable-style plus CRM—capturing guest data, preventing no-shows, enabling cross-venue marketing, and optimizing table turnover across all APM properties.</p>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>Must Have (MVP)</h3>
+                        <p><em>Outcome-driven features finalized in Discovery phase</em></p>
+                        <ul>
+                            <li><strong>Unified guest profiles:</strong> Read from reservation/POS exports or APIs</li>
+                            <li><strong>Consent capture & audit:</strong> Email/SMS per venue + global unsubscribe</li>
+                            <li><strong>Deposits/no-show guard:</strong> Stripe Checkout hosted (PCI SAQ-A scope - no raw card data on our servers)</li>
+                            <li><strong>Two-way SMS/email:</strong> Confirmations, reminders, waitlist notifications<br>
+                            <small><em>Marketing SMS requires seller/venue-specific prior express written consent; we store auditable opt-ins per venue and honor STOP/HELP. TCPA consent + A2P 10DLC registration required. The FCC's 2023 'one-to-one consent' lead-gen rule was <strong>vacated by the Eleventh Circuit (Jan 2025)</strong> and the FCC <strong>repealed it (July 2025)</strong>. It is <strong>not in force</strong>. We still require venue-specific, documented consent for any marketing SMS.</em></small></li>
+                            <li><strong>One cross-venue campaign:</strong> With holdout group & revenue attribution</li>
+                            <li><strong>Manager daily digest:</strong> Covers, no-shows, deposits, KPI dashboard</li>
+                        </ul>
+                        <div class="callout">
+                            <small><strong>TCPA/CAN-SPAM compliant.</strong> Venue-level consent, per-channel opt-in, single "unsubscribe from all venues" control. All marketing emails include clear opt-out honored within 10 business days. A2P 10DLC registration includes brand + campaign registration with carrier fee budgeting. Guest UIs follow WCAG 2.2 AA; ADA accessibility testing included in Beta.</small>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Should Have (Pilot+)</h3>
+                        <p><em>Phase 2 enhancements based on pilot results</em></p>
+                        <ul>
+                            <li><strong>Pacing caps:</strong> Per 15-minute blocks with waitlist auto-fill</li>
+                            <li><strong>Additional campaigns:</strong> Two more cross-venue marketing campaigns</li>
+                            <li><strong>Finance integration:</strong> Exports for reconciliation and reporting</li>
+                            <li><strong>Access control:</strong> Basic roles/permissions and audit logging</li>
+                            <li><strong>Enhanced analytics:</strong> Customer lifetime value and cohort analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Could Have (Phase 3+)</h3>
+                        <p><em>Advanced features pending market validation</em></p>
+                        <ul>
+                            <li><strong>Membership/perks programs:</strong> Tiered loyalty with exclusive access</li>
+                            <li><strong>Event management:</strong> Private dining and special event coordination</li>
+                            <li><strong>POS write-backs:</strong> Deep integration with point-of-sale systems</li>
+                            <li><strong>Predictive features:</strong> Machine learning for demand forecasting</li>
+                            <li><strong>Dynamic pricing pilots:</strong> Algorithmic pricing optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Won't Have (Current Scope)</h3>
+                        <p><em>Explicitly excluded to maintain project focus</em></p>
+                        <ul>
+                            <li><strong>Full marketplace parity:</strong> Complete OpenTable/Resy replacement</li>
+                            <li><strong>Complex inventory management:</strong> Beyond basic coordination</li>
+                            <li><strong>Multi-tenant SaaS:</strong> Focus on APM-specific optimization first</li>
+                            <li><strong>Mobile apps:</strong> Web-responsive interface sufficient for MVP</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Phase</th>
+                                <th>Timeline</th>
+                                <th>Key Features</th>
+                                <th>Investment</th>
+                                <th>Expected ROI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Discovery + MVP</td>
+                                <td>12-20 weeks</td>
+                                <td>Must Have features, compliance, integration</td>
+                                <td>$36,000-64,000</td>
+                                <td>Baseline establishment + initial optimization</td>
+                            </tr>
+                            <tr>
+                                <td>Phase 2 (Enhancement)</td>
+                                <td>8-12 weeks</td>
+                                <td>Should Have features, advanced analytics</td>
+                                <td>$24,000-40,000</td>
+                                <td>$10K-20K monthly contribution uplift (40-60% flow-through per <a href="https://str.com/data-insights-blog/what-is-revpar" style="color: #4CAF50;">STR</a>/<a href="https://www.ahla.com/news/state-industry-hotels-face-rising-costs-and-flattening-growth-new-travel-trends-provide" style="color: #4CAF50;">AHLA</a> framing)</td>
+                            </tr>
+                            <tr>
+                                <td>Phase 3 (Scale)</td>
+                                <td>6+ months</td>
+                                <td>External licensing, predictive features</td>
+                                <td>Revenue-funded</td>
+                                <td>Scalable SaaS revenue streams</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Impact -->
+    <section class="section" id="financials">
+        <div class="container">
+            <h2>Financial Impact Projections</h2>
+            <div class="section-content">
+                <div class="financial-grid">
+                    <div class="metric-box">
+                        <div class="number">≥5%</div>
+                        <div class="label">Guest Capture Rate<br><small>(venue-level consent)</small></div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="number">≥3pp</div>
+                        <div class="label">No-Show Reduction<br><small>(vs 8-12 week baseline; deposits are an accepted practice and can reduce no-shows; we'll A/B test locally per <a href="https://resy.com/terms" style="color: #4CAF50;">Resy</a> and <a href="https://str.com/data-insights-blog/what-is-revpar" style="color: #4CAF50;">STR</a> guidance)</small></div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="number">≥2%</div>
+                        <div class="label">Cross-Venue Conversion<br><small>(holdout-adjusted)</small></div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="number">≥3x</div>
+                        <div class="label">Campaign ROI<br><small>(attribution documented)</small></div>
+                    </div>
+                </div>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>Revenue Protection (No-Show Reduction)</h3>
+                        <ul>
+                            <li><strong>Baseline no-show rate:</strong> To be measured (8-12 week baseline)</li>
+                            <li><strong>Target reduction:</strong> ≥3 percentage points</li>
+                            <li><strong>Per venue impact:</strong> $2,000-4,000/month recovered revenue</li>
+                            <li><strong>Total APM impact:</strong> $6,000-12,000/month across all venues</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Cross-Venue Marketing Impact</h3>
+                        <ul>
+                            <li><strong>Guest database capture target:</strong> 5% of diners with consent</li>
+                            <li><strong>Cross-venue conversion target:</strong> 2% of targeted guests</li>
+                            <li><strong>Average additional spend:</strong> $75 per converted visit</li>
+                            <li><strong>Monthly incremental revenue:</strong> $3,000-8,000</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="callout info">
+                    <strong>Measurement Window:</strong> 60-day KPI readout after system stabilization (2-4 weeks live operation). All KPIs are baseline-adjusted using venue-specific measurements. Projections are modeled scenarios based on industry benchmarks; actual results depend on baseline measurements and venue-specific factors established during Discovery phase.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Japan Hotel Connection -->
+    <section class="section">
+        <div class="container">
+            <h2>The Japan Hotel Connection</h2>
+            <div class="section-content">
+                <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem;">Building Toward the $50M Japan Hotel Objective Through Strategic Technology Assets</p>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>1. Proven Restaurant Optimization</h3>
+                        <p>Demonstrate measurable contribution margin improvements (GOP uplift) across APM venues that translate directly to hotel management expertise.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>2. Scalable SaaS Revenue</h3>
+                        <p>License the system to other restaurant groups at $399/venue/month + $0.20/cover, creating recurring revenue streams.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>3. Technology IP Value</h3>
+                        <p>Build valuable intellectual property in hospitality tech that enhances acquisition financing capabilities.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>4. Operational Expertise</h3>
+                        <p>Refine guest experience and revenue optimization systems that translate directly to hotel operations.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>5. Capital Generation</h3>
+                        <p>Create multiple revenue streams supporting the hotel investment without touching restaurant profits.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>6. Market Credibility</h3>
+                        <p>Establish technology leadership in hospitality sector, attracting investor interest for larger projects.</p>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Milestone</th>
+                                <th>Technology Asset</th>
+                                <th>Capital Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Year 1</td>
+                                <td>Perfect system across APM venues</td>
+                                <td>Proven optimization platform</td>
+                                <td>$180K-300K additional profit</td>
+                            </tr>
+                            <tr>
+                                <td>Year 2</td>
+                                <td>Scale to 40+ external venues</td>
+                                <td>SaaS revenue stream</td>
+                                <td>$192K+ annual recurring revenue</td>
+                            </tr>
+                            <tr>
+                                <td>Year 3</td>
+                                <td>Export/consulting launch</td>
+                                <td>Integrated hospitality platform</td>
+                                <td>Capital + expertise for hotel acquisition</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="callout">
+                    <strong>Export Operations Compliance:</strong> Future export ventures will operate to Incoterms® 2020 standards, screen counterparties against restricted party lists, and follow EAR/OFAC controls for sanctions, end-use, and end-user compliance. Full compliance framework documented with ICC, ITA, BIS, and OFAC guidelines.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Structure -->
+    <section class="section" id="partnership">
+        <div class="container">
+            <h2>Partnership Structure: 50/50 Founders</h2>
+            <div class="section-content">
+                <div class="callout">
+                    <h3>APM Tech, LLC - Proposed Terms</h3>
+                    <p><strong>Ownership:</strong> 50% APM / 50% Technical Partner<br>
+                    <strong>Vesting:</strong> 4-year vesting schedule, 1-year cliff for both founders<br>
+                    <strong>IP Assignment:</strong> All intellectual property assigned to the company, not individual founders<br>
+                    <strong>Year 1 Budget:</strong> $150,000 (monthly tranches)<br>
+                    <strong>Technical Partner Salary:</strong> $8,000/month from agreed Year-1 budget for product/dev + lifecycle/socials + governance (reviewed quarterly against delivery/KPIs)</p>
+                </div>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>APM Brings</h3>
+                        <ul>
+                            <li><strong>Capital:</strong> $150K Year 1 budget + ongoing funding as needed</li>
+                            <li><strong>Venues:</strong> 3 established restaurants as initial customers and testing ground</li>
+                            <li><strong>Market Credibility:</strong> Established brand and industry connections</li>
+                            <li><strong>Business Development:</strong> Access to restaurant owner networks</li>
+                            <li><strong>Operational Expertise:</strong> Deep understanding of restaurant operations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Technical Partner Brings</h3>
+                        <ul>
+                            <li><strong>Product Architecture:</strong> Complete system design and development</li>
+                            <li><strong>Technical Execution:</strong> All coding, integration, and platform management</li>
+                            <li><strong>Project Management:</strong> Timeline adherence and milestone delivery</li>
+                            <li><strong>Ongoing Support:</strong> System maintenance, updates, and scaling</li>
+                            <li><strong>Industry Knowledge:</strong> Restaurant tech expertise and best practices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Governance Element</th>
+                                <th>Structure</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Board Structure</td>
+                                <td>3-Person Board: Alvaro, Technical Partner, Independent Member</td>
+                                <td>Balanced decision-making with tie-breaker</td>
+                            </tr>
+                            <tr>
+                                <td>Reserved Matters</td>
+                                <td>Spending >$10K, debt/equity, IP transfers require 2/3 vote</td>
+                                <td>Protect major decisions</td>
+                            </tr>
+                            <tr>
+                                <td>Kill/Step-In Rights</td>
+                                <td>APM can pause funding or buy out if milestones miss by 60+ days</td>
+                                <td>Performance accountability</td>
+                            </tr>
+                            <tr>
+                                <td>Data Ownership</td>
+                                <td>APM retains all guest and transaction data</td>
+                                <td>Protect core business asset</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing/Social Scope</td>
+                                <td>Monthly content quotas defined in living appendix; changes route through Change Request process</td>
+                                <td>Transparent scope management</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Approach & Timeline -->
+    <section class="section">
+        <div class="container">
+            <h2>Development Approach & Realistic Timeline</h2>
+            <div class="section-content">
+                <div class="callout info">
+                    <h3>Two-Contract Approach: Discovery → Pilot</h3>
+                    <p>Realistic timeline ranges with change control and dependency management</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 0: Discovery & Scope (2-4 weeks)</h3>
+                            <p><strong>Investment:</strong> Fixed $6,000-12,000</p>
+                            <p><strong>Outputs:</strong></p>
+                            <ul>
+                                <li>Requirements analysis and data-flow mapping</li>
+                                <li>Prioritized backlog (MoSCoW methodology)</li>
+                                <li>Integration feasibility assessment</li>
+                                <li>UX wireframes and acceptance criteria</li>
+                                <li>KPI measurement plan with baseline establishment</li>
+                                <li>Privacy policy and terms of service draft</li>
+                            </ul>
+                            <p><strong>Go/No-Go Gate:</strong> Owner sign-off on scope, KPIs, and budget</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 1: Pilot Build & Alpha (6-10 weeks)</h3>
+                            <p><strong>Investment:</strong> Fixed $24,000-40,000 OR Time & Materials with $4,000-5,000/week cap</p>
+                            <p><strong>Outputs:</strong></p>
+                            <ul>
+                                <li>Deployable MVP with limited venue rollout</li>
+                                <li>Staff training materials and support playbook</li>
+                                <li>Error budgets and operational runbook</li>
+                                <li>Integration with existing reservation/POS systems</li>
+                                <li>Security audit and compliance documentation</li>
+                            </ul>
+                            <p><strong>Scope Freeze:</strong> Features locked at Alpha cut; changes require formal Change Requests</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 2: Beta Rollout & Stabilization (4-6 weeks)</h3>
+                            <p><strong>Investment:</strong> $6,000-12,000</p>
+                            <p><strong>Outputs:</strong></p>
+                            <ul>
+                                <li>Live operation across 2-3 venues</li>
+                                <li>Issue resolution and system optimization</li>
+                                <li>60-day KPI readout with performance analysis</li>
+                                <li>Operational transfer to APM team</li>
+                                <li>Recommendations for Phase 3 scaling</li>
+                            </ul>
+                            <p><strong>Success Criteria:</strong> 99.5% uptime during service windows, all KPI targets met</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Total Timeline</th>
+                                <th>Investment Range</th>
+                                <th>Dependencies</th>
+                                <th>Risk Factors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12-20 weeks</td>
+                                <td>$36,000-64,000</td>
+                                <td>Vendor API access, POS integration capabilities</td>
+                                <td>Scope creep, integration complexity, change requests</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="callout warning">
+                    <strong>Change Control:</strong> All scope changes after Alpha freeze require formal Change Requests with transparent time/cost impact. Weekly caps prevent overruns. Exact timing depends on vendor access and final scope complexity.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scaling Strategy -->
+    <section class="section">
+        <div class="container">
+            <h2>Scaling Strategy: Beyond APM</h2>
+            <div class="section-content">
+                <div class="cards">
+                    <div class="card">
+                        <h3>External Licensing (Months 4-12)</h3>
+                        <ul>
+                            <li><strong>Target Market:</strong> Independent restaurants and small chains (2-10 locations)</li>
+                            <li><strong>Pricing Model:</strong> $399/venue/month + $0.20 per cover</li>
+                            <li><strong>Customer Acquisition Cost:</strong> ~$900 per venue</li>
+                            <li><strong>Payback Period:</strong> ~2.5 months</li>
+                            <li><strong>Year 1 Target:</strong> 40 external venues</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Revenue Projections</h3>
+                        <ul>
+                            <li><strong>Month 6:</strong> 5 external venues = $2,000 MRR</li>
+                            <li><strong>Month 9:</strong> 15 external venues = $6,000 MRR</li>
+                            <li><strong>Month 12:</strong> 40 external venues = $16,000 MRR</li>
+                            <li><strong>Annual Run Rate:</strong> $192,000+ recurring revenue (base pricing only)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Market Segment</th>
+                                <th>Target Size</th>
+                                <th>Pricing Strategy</th>
+                                <th>Revenue Potential</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Independent Restaurants</td>
+                                <td>Single locations</td>
+                                <td>$399/month base</td>
+                                <td>$4,788 annual per venue</td>
+                            </tr>
+                            <tr>
+                                <td>Small Restaurant Groups</td>
+                                <td>2-10 locations</td>
+                                <td>$399/month + volume discount</td>
+                                <td>$20K-40K annual per group</td>
+                            </tr>
+                            <tr>
+                                <td>Hospitality Companies</td>
+                                <td>Hotels with restaurants</td>
+                                <td>Enterprise pricing</td>
+                                <td>$50K+ annual per enterprise</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Roadmap -->
+    <section class="section" id="roadmap">
+        <div class="container">
+            <h2>Implementation Timeline</h2>
+            <div class="section-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 0: Partnership Formation (Month 0)</h3>
+                            <ul>
+                                <li>Finalize partnership agreement</li>
+                                <li>Establish APM Tech, LLC</li>
+                                <li>Set up development environment</li>
+                                <li>Begin venue data audit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 1: APM Pilot (Months 1-3)</h3>
+                            <ul>
+                                <li>Deploy system across Ogawa, Hiyakawa, Midorie</li>
+                                <li>Train staff on new processes</li>
+                                <li>Launch initial marketing campaigns</li>
+                                <li>Measure and optimize performance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 2: External Launch (Months 4-6)</h3>
+                            <ul>
+                                <li>Prepare for external licensing</li>
+                                <li>Develop sales and marketing materials</li>
+                                <li>Onboard first 5 external venues</li>
+                                <li>Refine product based on feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 3: Scale & Expand (Months 7-12)</h3>
+                            <ul>
+                                <li>Aggressive customer acquisition</li>
+                                <li>Product feature expansion</li>
+                                <li>Team building for support and sales</li>
+                                <li>Prepare for Series A or strategic partnerships</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 4: Hospitality Empire (Year 2+)</h3>
+                            <ul>
+                                <li>Launch hotel consulting practice</li>
+                                <li>Establish export operations</li>
+                                <li>Pursue Japan hotel acquisition</li>
+                                <li>Build integrated hospitality technology platform</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand, Design & Lifecycle Marketing -->
+    <section class="section">
+        <div class="container">
+            <h2>Brand, Design & Lifecycle Marketing</h2>
+            <div class="section-content">
+                <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem;">Complete marketing infrastructure with realistic timelines and 2025 compliance requirements</p>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>Scope & Outputs</h3>
+                        <ul>
+                            <li><strong>Brand identity:</strong> Logo system, color/type, usage rules, 8-20p brand guide, social kit</li>
+                            <li><strong>Marketing site (v1):</strong> IA + copy for 4-6 core pages, responsive build, WCAG 2.2 AA baseline</li>
+                            <li><strong>Email & SMS:</strong> DNS auth (SPF/DKIM/DMARC), templates, segments, flows, A2P 10DLC registration
+                            <br><small><em>Bulk-sender requirements: SPF+DKIM, <strong>publish DMARC (p=none acceptable; enforcement recommended)</strong>, functional <strong>one-click unsubscribe</strong>, and spam complaints <strong><0.3%</strong> (<a href="https://support.google.com/a/answer/14229414" style="color: #4CAF50;">Google Help</a>/<a href="https://senders.yahooinc.com/best-practices/" style="color: #4CAF50;">Yahoo Senders</a>)</em></small></li>
+                            <li><strong>Launch collateral:</strong> One-pagers, menus, investor deck skin, social templates</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Timeline (Solo + 1-2 Contractors)</h3>
+                        <p><strong>Weeks 0-2:</strong> Brand discovery, DNS auth, IA/wireframes</p>
+                        <p><strong>Weeks 2-4:</strong> Brand iterations, visual design, templates</p>
+                        <p><strong>Weeks 4-6:</strong> Brand guide, site build, email flows</p>
+                        <p><strong>Weeks 6-8:</strong> Collateral kit, QA, A2P 10DLC registration</p>
+                        <p><strong>Weeks 8-10:</strong> Launch, analytics, domain warm-up</p>
+                        <div class="callout">
+                            <small><strong>Buffer:</strong> Add 20-30% time if CRM scope grows or third-party approvals lag</small>
+                        </div>
+                        <div class="callout info" style="margin-top: 1rem;">
+                            <small><strong>Founder time allocation:</strong> 60–70% product/dev, 20–30% lifecycle & socials, 10% governance/reporting</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Line Item</th>
+                                <th>One-off Budget (USD)</th>
+                                <th>Monthly (USD)</th>
+                                <th>Notes/Sources</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Brand identity (logo + guide)</td>
+                                <td>$600-2,200 (contest) or $3,000-8,000 (freelancer)</td>
+                                <td>—</td>
+                                <td>99designs benchmarks; small-biz identity ranges</td>
+                            </tr>
+                            <tr>
+                                <td>Website (4-6 pages)</td>
+                                <td>$2,000-6,000</td>
+                                <td>$10-40</td>
+                                <td>Builder/hosting varies; lean scope for v1</td>
+                            </tr>
+                            <tr>
+                                <td>Copywriting (site + email)</td>
+                                <td>$800-3,000</td>
+                                <td>—</td>
+                                <td>Business/marketing copy market rates</td>
+                            </tr>
+                            <tr>
+                                <td>ESP (Mailchimp/Klaviyo)</td>
+                                <td>—</td>
+                                <td>$13-60+ (list-size dependent)</td>
+                                <td>Current platform pricing</td>
+                            </tr>
+                            <tr>
+                                <td>Transactional email (Postmark)</td>
+                                <td>—</td>
+                                <td>$15 (10k emails/mo)</td>
+                                <td>Official pricing for reservations/confirmations</td>
+                            </tr>
+                            <tr>
+                                <td>SMS (US, A2P 10DLC)</td>
+                                <td><strong>Brand reg $4 one-time; vetting $15–$40 one-time</strong></td>
+                                <td><strong>Campaign ~$15/mo; carrier surcharges per SMS</strong> + platform SMS rates*</td>
+                                <td><a href="https://help.twilio.com/articles/11587910480155-A2P-10DLC-Campaign-Vetting-FAQ" style="color: #4CAF50;">Twilio</a>, <a href="https://resy.com/terms" style="color: #4CAF50;">Resy</a></td>
+                            </tr>
+                            <tr>
+                                <td>Accessibility audit (WCAG 2.2 AA)</td>
+                                <td>$1,500-5,500</td>
+                                <td>—</td>
+                                <td>Representative 2025 audit ranges</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3 style="margin: 3rem 0 2rem 0; text-align: center;">Creative & Brand Workstream Details</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Workstream</th>
+                                <th>Scope</th>
+                                <th>Timeline</th>
+                                <th>Cost (range)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Brand identity</strong></td>
+                                <td>logo, color/type system, usage guide, figma tokens</td>
+                                <td>3–4 wks</td>
+                                <td><strong>$6k–$12k</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Design system</strong></td>
+                                <td>UI kit, components, email + landing templates</td>
+                                <td>3–5 wks (overlap)</td>
+                                <td><strong>$5k–$10k</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Content & assets</strong></td>
+                                <td>venue photography, 10 short-form videos</td>
+                                <td>2–4 wks</td>
+                                <td><strong>$3k–$8k</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email setup</strong></td>
+                                <td>Postmark/Mailgun, domain auth (SPF/DKIM/DMARC), templates</td>
+                                <td>1–2 wks</td>
+                                <td><strong>$1k–$3k</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Launch media</strong></td>
+                                <td>paid tests (search/social), creators, PR-lite</td>
+                                <td>4–8 wks</td>
+                                <td><strong>$5k–$15k (test budget)</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top: 1rem; font-style: italic; text-align: center;">
+                        <small>Budgetary ranges; lock actuals after discovery/vendor quotes.<br>
+                        *10DLC fees are provider-dependent and subject to carrier surcharges.</small>
+                    </div>
+                </div>
+                
+                <div class="callout warning">
+                    <strong>2025 Compliance Requirements:</strong>
+                    <ul style="margin: 0.5rem 0; text-align: left;">
+                        <li><strong>Gmail/Yahoo bulk-sender requirements:</strong> SPF+DKIM, publish DMARC (p=none acceptable; enforcement recommended), one-click list-unsubscribe (visible and functional), spam rate <0.3% for high-volume senders</li>
+                        <li><strong>TCPA consent:</strong> Marketing texts require venue-specific consent; store auditable opt-ins; honor STOP/HELP. The FCC's 2023 'one-to-one consent' rule was vacated by the Eleventh Circuit (Jan 2025) and repealed by the FCC (July 2025)—not in force</li>
+                        <li><strong>A2P 10DLC:</strong> Register brand and campaign to avoid filtering/penalties; expect 2-4 weeks for domain warm-up</li>
+                    </ul>
+                </div>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>Scaling Plan (12-24 Months)</h3>
+                        <p><strong>Phase A:</strong> You + 1 designer + 1 lifecycle contractor</p>
+                        <ul>
+                            <li>2 brand identities/month, 1 website/month</li>
+                            <li>3-4 flows/venue, design system first approach</li>
+                            <li>Target NRR ≥110% via cross-venue expansion</li>
+                        </ul>
+                        <p><strong>Phase B:</strong> Add lifecycle manager + part-time copy</p>
+                        <ul>
+                            <li>3-4 identities/quarter, 2 sites/quarter</li>
+                            <li>6-8 flows/venue with template library</li>
+                            <li>Best-in-class NRR ≈120%+ through add-ons</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Risk Controls & Fallbacks</h3>
+                        <p><strong>A2P approval delays:</strong> Switch to email-first + web push; use toll-free SMS as interim</p>
+                        <p><strong>High spam/low delivery:</strong> Pause blasts, re-warm on subdomain, prune list, reduce volume</p>
+                        <p><strong>Brand concept churn:</strong> Invoke decision matrix, timebox rounds, A/B validate top concepts</p>
+                        <p><strong>Scope creep:</strong> Freeze v1 scope, queue extras to v1.1, preserve timeline/cost</p>
+                        <p><strong>Accessibility gaps:</strong> Remediate to WCAG 2.2 AA, retest, add periodic scans</p>
+                        <p><strong>Deposit policy conversion impact:</strong> If deposit policy pushes conversion down, A/B test softer holds (card-on-file, 24-hr window) before rolling back globally</p>
+                    </div>
+                </div>
+                
+                <div class="callout">
+                    <strong>KPI Guardrails:</strong> We scale paid only if cohort payback < 3 months; otherwise cut or iterate. LTV/CAC >3 by month 12; deliverability spam rate <0.3%; DMARC published on all domains.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Architecture & Dependencies -->
+    <section class="section">
+        <div class="container">
+            <h2>Technical Architecture & Dependencies</h2>
+            <div class="section-content">
+                <div class="cards">
+                    <div class="card">
+                        <h3>Integration Strategy</h3>
+                        <ul>
+                            <li><strong>Reservations/POS:</strong> Official APIs, webhooks, or scheduled exports</li>
+                            <li><strong>Deep write-backs:</strong> Phase 2+ pending vendor access</li>
+                            <li><strong>Payments:</strong> Stripe Checkout hosted (PCI SAQ-A scope - no raw card data on our servers)<br>
+                            <small><em>Current published <strong>Stripe U.S. online rate 2.9% + $0.30</strong> per successful charge (subject to change) - <a href="https://stripe.com/pricing" style="color: #4CAF50;">Stripe Pricing</a></em></small></li>
+                            <li><strong>Messaging:</strong> Twilio (SMS) + Postmark/Mailgun (email)</li>
+                            <li><strong>Security:</strong> Secrets vaulted, PII minimization, SSO optional</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Core Technology Stack</h3>
+                        <ul>
+                            <li><strong>Database:</strong> Managed PostgreSQL with encryption at rest</li>
+                            <li><strong>Application:</strong> Cloud-native architecture (AWS/GCP)</li>
+                            <li><strong>Monitoring:</strong> Error tracking, performance monitoring, uptime alerts</li>
+                            <li><strong>Analytics:</strong> Metabase/Looker Lite for business intelligence</li>
+                            <li><strong>Backup:</strong> Automated daily backups with 30-day retention</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Risk Category</th>
+                                <th>Specific Risk</th>
+                                <th>Mitigation Strategy</th>
+                                <th>Contingency Plan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Integration</td>
+                                <td>Vendor API limitations</td>
+                                <td>Start with exports, upgrade when access available</td>
+                                <td>Manual data entry workflows</td>
+                            </tr>
+                            <tr>
+                                <td>Technical</td>
+                                <td>Solo developer capacity</td>
+                                <td>Weekly capacity caps, realistic timeline ranges</td>
+                                <td>Contract developer augmentation</td>
+                            </tr>
+                            <tr>
+                                <td>Scope</td>
+                                <td>Feature creep post-Alpha</td>
+                                <td>Formal Change Request process with impact analysis</td>
+                                <td>Additional budget allocation or scope reduction</td>
+                            </tr>
+                            <tr>
+                                <td>Operational</td>
+                                <td>System downtime during service</td>
+                                <td>99.5% uptime SLA, error budgets, failover procedures</td>
+                                <td>Manual backup processes, rapid response team</td>
+                            </tr>
+                            <tr>
+                                <td>Compliance</td>
+                                <td>Data privacy violations</td>
+                                <td>GDPR/CCPA framework, consent management, audit trails</td>
+                                <td>Legal counsel review, compliance officer consultation</td>
+                            </tr>
+                            <tr>
+                                <td>Financial</td>
+                                <td>Infrastructure cost overruns</td>
+                                <td>Transparent cost modeling, usage monitoring</td>
+                                <td>Scaling optimization, cost allocation review</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="callout warning">
+                    <strong>Critical Dependencies:</strong> Progress depends on reservation/POS vendor access (APIs/webhooks/exports). If access is limited, we run on scheduled exports initially and upgrade later. Brand identity and legal documentation workstreams run in parallel to development.
+                </div>
+                
+                <div class="callout">
+                    <strong>Estimated Annual Infrastructure Costs:</strong> $5,000-12,000 for hosting, messaging, and monitoring services based on transaction volume. Transparent cost modeling provided during Discovery phase.
+                </div>
+                
+                <div class="callout info">
+                    <strong>Incident Response & Breach Notice:</strong> Security incidents are assessed within 2 hours; affected parties notified within 24 hours for material breaches. Data breach notifications follow state/federal requirements (typically 72 hours to authorities, affected individuals as required). Full incident response plan maintained with escalation procedures.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="section" id="next-steps">
+        <div class="container">
+            <h2>Next Steps & Decision Framework</h2>
+            <div class="section-content">
+                <div class="callout info">
+                    <h3>Decision Required</h3>
+                    <p><strong>Option 1:</strong> Discovery phase ($6K-12K) to validate scope and approach<br>
+                    <strong>Option 2:</strong> Full pilot commitment ($36K-64K) with realistic 12-20 week timeline<br>
+                    <strong>Partnership Discussion:</strong> 50/50 founders structure vs. vendor relationship<br>
+                    <strong>Success Criteria:</strong> Measurable KPIs with 60-day validation window</p>
+                </div>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>Immediate Actions (This Week)</h3>
+                        <ul>
+                            <li>Decide on Discovery phase vs. full pilot commitment</li>
+                            <li>Review partnership structure options (50/50 vs. vendor)</li>
+                            <li>Provide access to current reservation/POS systems</li>
+                            <li>Identify stakeholders for requirements gathering</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>30-Day Goals</h3>
+                        <ul>
+                            <li>Complete Discovery phase with detailed requirements</li>
+                            <li>Finalize technical architecture and integration plan</li>
+                            <li>Establish baseline measurements across all venues</li>
+                            <li>Define success criteria and measurement protocols</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>90-Day Objectives</h3>
+                        <ul>
+                            <li>MVP deployed and stabilized at pilot venues</li>
+                            <li>Initial KPI improvements documented and validated</li>
+                            <li>Operational handover completed with training</li>
+                            <li>Phase 2 roadmap defined based on pilot results</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Document</th>
+                                <th>Purpose</th>
+                                <th>Timeline</th>
+                                <th>Owner</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Discovery SOW</td>
+                                <td>Requirements analysis and feasibility assessment</td>
+                                <td>Week 1</td>
+                                <td>Technical Partner</td>
+                            </tr>
+                            <tr>
+                                <td>Systems Integration Audit</td>
+                                <td>Current technology stack and API access evaluation</td>
+                                <td>Week 2</td>
+                                <td>Technical Partner</td>
+                            </tr>
+                            <tr>
+                                <td>Baseline Metrics Report</td>
+                                <td>Current performance benchmarks and measurement plan</td>
+                                <td>Week 3</td>
+                                <td>APM Operations + Technical Partner</td>
+                            </tr>
+                            <tr>
+                                <td>Partnership Structure Decision</td>
+                                <td>50/50 founders vs. vendor relationship framework</td>
+                                <td>Week 4</td>
+                                <td>Legal counsel + Stakeholders</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            <!--     <div style="text-align: center; margin: 3rem 0;">
+                    <a href="#" class="cta-button" style="font-size: 1.2rem; padding: 1.5rem 3rem;">Request Partnership Discussion</a>
+                </div> -->
+                
+                <div class="callout">
+                    <p><em>This proposal represents a strategic partnership opportunity that leverages APM Restaurant Group's established operations to build scalable technology assets, generate recurring revenue, and create the foundation for Alvaro Perez Miranda's broader hospitality empire including the Japan hotel objective.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+        <footer style="background: #1a1a1a; color: white; padding: 2rem 0; text-align: center;">
+            <div class="container">
+                <p>&copy; 2024 APM Restaurant Management System Strategic Partnership Proposal</p>
+                <p style="margin-top: 1rem; opacity: 0.8;">Confidential and Proprietary - For Alvaro Perez Miranda & APM Restaurant Group</p>
+                <div style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.7;">
+                    <p><strong>Compliance Framework:</strong> 
+                    <a href="https://docs.fcc.gov/public/attachments/DOC-408396A1.pdf" style="color: #4CAF50;">TCPA/FCC Guidelines</a> | 
+                    <a href="https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business" style="color: #4CAF50;">CAN-SPAM (FTC)</a> | 
+                    <a href="https://www.twilio.com/docs/messaging/compliance/a2p-10dlc" style="color: #4CAF50;">A2P 10DLC (Twilio)</a> | 
+                    <a href="https://docs.stripe.com/payments/checkout" style="color: #4CAF50;">PCI SAQ-A (Stripe)</a> | 
+                    <a href="https://str.com/data-insights-blog/what-is-revpar" style="color: #4CAF50;">Industry Evidence (STR)</a>
+                    </p>
+                    <p style="margin-top: 0.5rem;">Hotel metrics align to STR definitions. Trade risk assessments reference <a href="https://unctad.org/system/files/official-document/rmt2024_en.pdf" style="color: #4CAF50;">UNCTAD RMT 2024</a> and <a href="https://www.wto.org/english/res_e/booksp_e/trade_outlook25_e.pdf" style="color: #4CAF50;">WTO Global Trade Outlook 2025</a>. Industry outlook from <a href="https://www.ahla.com/sites/default/files/25_SOTI.pdf" style="color: #4CAF50;">AHLA SOTI 2025</a>.</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
